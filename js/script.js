@@ -17,12 +17,12 @@ Organizzare i singoli membri in card/schede
 Consigli del giorno:
 Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
 E ricordiamoci che console.log() è nostro amico!
-Buon lavoro! */
+ */
 
 const team = [{
     name: "Wayne Barnett",
     role: "Founder & CEO",
-    image:"wayne-barnett-founder-ceo.jpg"
+    image:'wayne-barnett-founder-ceo.jpg',
 },
 {
     name: "Angela Caroll",
@@ -51,10 +51,19 @@ const team = [{
 }]
 
 
+const card = document.getElementById("main");
 
-for (let i = 0; i < team.length; i++) {
 
-    console.log(team[i]);
+for (let i = 0; i < team.length; i++){
+    card.innerHTML +=
+    '<div class="card">' +
+    '<img class="card-img-top" src="img/'  + team[i].image + '">' +
+    '<div class="card-body">' + 
+    '<h5 card-title">' + team[i].name + '</h5>' +
+    '<p class="card-text">' + team[i].role + '</p>' + '</div>'
+    }
     
-}
 
+
+
+    
